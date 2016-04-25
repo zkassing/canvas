@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task01</title>
+</head>
+<body>
+    <canvas id="ex1" width="400" height="100" style="border:solid 1px #eee"></canvas>
+    <script>
+        window.onload = function () {
+            drawExamples();
+        }
+        
+        function drawExamples() {
+            var canvas = document.getElementById('ex1');
+            var context = canvas.getContext('2d');
+
+            context.fillStyle = "#ff0000";
+            context.fillRect(10, 10, 100, 100);
+        }
+    </script>
+</body>
+</html>

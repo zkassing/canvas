@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas width="400" height="200" id="ex1"></canvas>
+    <script>
+        window.onload = function () {
+            drawExamples();
+        }
+        function drawExamples() {
+            var canvas = document.getElementById('ex1');
+            var context = canvas.getContext('2d');
+
+            context.fillStyle = "#009900";
+            context.fillRect(10,10,100,100);
+
+            context.strokeStyle = '#0000ff';
+            context.lineWidth = 5;
+            context.strokeRect(10,10,100,100);
+        }
+        //stroke是边框，可以规定边框的宽度lineWidth和边框颜色strokeStyle;
+        //fill是填充,可以规定填充颜色fillStyle
+        //clear清除，clearRect可以画出一个透明矩形
+    </script>
+</body>
+</html>

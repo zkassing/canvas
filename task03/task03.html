@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task03</title>
+</head>
+<body>
+<canvas id="ex1" width="500" height="500"></canvas>
+<script>
+    //beginPath()和closePath()是开始和关闭一条路径的方法
+    var canvas = document.getElementById('ex1');
+    var context = canvas.getContext('2d');
+    context.beginPath();
+
+    //绘制路径
+    //lineWidth定义线条的宽度
+    context.lineWidth = 10
+    //lineCap设置线的样式,butt round square
+//    context.lineCap = "round";
+    //lineJoin设置两条线相交点的样式,miter bevel round
+    context.lineJoin = "bevel";
+    //moveTo()将起点规定到某一点
+    context.moveTo(10,10);
+    //lineTo()画一条先从moveTo到lineTo规定的点
+    context.lineTo(50,50);
+    context.lineTo(60,200);
+    context.lineTo(10,10);
+    //画线
+        context.stroke();
+    //组成实心图形,需要组成一个闭合的图形
+    //context.fill();
+    context.closePath();
+</script>
+</body>
+</html>
